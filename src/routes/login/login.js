@@ -1,23 +1,23 @@
 import React from "react";
 import Proptypes from "prop-types";
 
-function Home(props) {
+function Login() {
   return (
     <section>
-      <h1>Welcome Home</h1>
+      <h1>Login Page</h1>
     </section>
   );
 }
 
-Home.prototype = {
+Login.prototype = {
   history: Proptypes.object.isRequired,
   location: Proptypes.object.isRequired,
   match: Proptypes.object.isRequired,
   staticContext: Proptypes.any
 };
 
-Home.defaultProps = {
+Login.defaultProps = {
   staticContext: null
 };
 
-export default Home;
+export default Login;

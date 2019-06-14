@@ -1,23 +1,23 @@
 import React from "react";
 import Proptypes from "prop-types";
 
-function Home(props) {
+function RouteNotFound(props) {
   return (
     <section>
-      <h1>Welcome Home</h1>
+      <h1>Oops...! 404 Route Not Found</h1>
     </section>
   );
 }
 
-Home.prototype = {
+RouteNotFound.prototype = {
   history: Proptypes.object.isRequired,
   location: Proptypes.object.isRequired,
   match: Proptypes.object.isRequired,
   staticContext: Proptypes.any
 };
 
-Home.defaultProps = {
+RouteNotFound.defaultProps = {
   staticContext: null
 };
 
-export default Home;
+export default RouteNotFound;

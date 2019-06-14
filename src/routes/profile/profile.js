@@ -1,23 +1,23 @@
 import React from "react";
 import Proptypes from "prop-types";
 
-function Home(props) {
+function Profile() {
   return (
     <section>
-      <h1>Welcome Home</h1>
+      <h1>Profile Page</h1>
     </section>
   );
 }
 
-Home.prototype = {
+Profile.prototype = {
   history: Proptypes.object.isRequired,
   location: Proptypes.object.isRequired,
   match: Proptypes.object.isRequired,
   staticContext: Proptypes.any
 };
 
-Home.defaultProps = {
+Profile.defaultProps = {
   staticContext: null
 };
 
-export default Home;
+export default Profile;
