@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React, { Fragment } from "react";
 import { Helmet } from "react-helmet-async";
 
 /**
@@ -8,18 +8,16 @@ import { Helmet } from "react-helmet-async";
  * @param {String} description
  */
 function ReactHelmet(WrappedComponent, title, description) {
-  return class extends Component {
-    render() {
-      return (
-        <Fragment>
-          <Helmet>
-            <title>{title}</title>
-            <meta name="description" content={description} />
-          </Helmet>
-          <WrappedComponent {...this.props} />
-        </Fragment>
-      );
-    }
+  return function ReactHelmetComponent(props) {
+    return (
+      <Fragment>
+        <Helmet>
+          <title>{title}</title>
+          <meta name="description" content={description} />
+        </Helmet>
+        <WrappedComponent {...props} />
+      </Fragment>
+    );
   };
 }
 
