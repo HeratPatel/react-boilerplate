@@ -1,5 +1,5 @@
 import Login from "./login";
-import ReactHelmet from "../../hocs/ReactHelmet";
+import ReactHelmet from "hocs/ReactHelmet";
 
 export default ReactHelmet(
   Login,

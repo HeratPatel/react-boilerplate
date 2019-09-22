@@ -1,5 +1,5 @@
 import RouteNotFound from "./404";
-import ReactHelmet from "../../hocs/ReactHelmet";
+import ReactHelmet from "hocs/ReactHelmet";
 
 export default ReactHelmet(
   RouteNotFound,

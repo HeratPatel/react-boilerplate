@@ -1,4 +1,4 @@
-'use strict';
+
 
 const path = require('path');
 const fs = require('fs');
@@ -83,6 +83,11 @@ module.exports = {
   appNodeModules: resolveApp('node_modules'),
   publicUrl: getPublicUrl(resolveApp('package.json')),
   servedPath: getServedPath(resolveApp('package.json')),
+  components: resolveApp('src/components'),
+  hocs: resolveApp('src/hocs'),
+  redux: resolveApp('src/redux'),
+  routes: resolveApp('src/routes'),
+  tools: resolveApp('src/tools')
 };
 
 
