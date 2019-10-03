@@ -19,8 +19,6 @@ const paths = require("./paths");
 const modules = require("./modules");
 const getClientEnvironment = require("./env");
 const ModuleNotFoundPlugin = require("react-dev-utils/ModuleNotFoundPlugin");
-const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
-  .BundleAnalyzerPlugin;
 
 const postcssNormalize = require("postcss-normalize");
 
@@ -472,10 +470,7 @@ module.exports = function(webpackEnv) {
         }
       ]
     },
-    plugins: [
-      // Webpack Bundle Analyzer
-      new BundleAnalyzerPlugin(),
-
+    plugins: [      
       // Generates an `index.html` file with the <script> injected.
       new HtmlWebpackPlugin(
         Object.assign(
