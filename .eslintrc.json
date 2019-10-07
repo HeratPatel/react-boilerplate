@@ -8,7 +8,7 @@
     "prettier/flowtype",
     "prettier/react"
   ],
-  "plugins": ["prettier", "css-modules", "require-jsdoc-except"],
+  "plugins": ["flowtype", "prettier", "css-modules", "require-jsdoc-except"],
   "env": {
     "browser": true,
     "jest": true
