@@ -1,7 +1,11 @@
-import React from "react";
-import Proptypes from "prop-types";
+import React from 'react';
+import Proptypes from 'prop-types';
 
-function Home(props) {
+/**
+ * Home
+ * @returns {Node}
+ */
+function Home() {
   return (
     <section>
       <h1>Welcome Home</h1>
@@ -13,11 +17,11 @@ Home.prototype = {
   history: Proptypes.object.isRequired,
   location: Proptypes.object.isRequired,
   match: Proptypes.object.isRequired,
-  staticContext: Proptypes.any
+  staticContext: Proptypes.any,
 };
 
 Home.defaultProps = {
-  staticContext: null
+  staticContext: null,
 };
 
 export default Home;

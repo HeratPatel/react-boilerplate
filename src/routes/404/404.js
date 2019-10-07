@@ -1,7 +1,11 @@
-import React from "react";
-import Proptypes from "prop-types";
+import React from 'react';
+import Proptypes from 'prop-types';
 
-function RouteNotFound(props) {
+/**
+ * RouteNotFound
+ * @returns {Node}
+ */
+function RouteNotFound() {
   return (
     <section>
       <h1>Oops...! 404 Route Not Found</h1>
@@ -13,11 +17,11 @@ RouteNotFound.prototype = {
   history: Proptypes.object.isRequired,
   location: Proptypes.object.isRequired,
   match: Proptypes.object.isRequired,
-  staticContext: Proptypes.any
+  staticContext: Proptypes.any,
 };
 
 RouteNotFound.defaultProps = {
-  staticContext: null
+  staticContext: null,
 };
 
 export default RouteNotFound;

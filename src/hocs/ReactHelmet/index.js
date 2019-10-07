@@ -1,3 +1,3 @@
-import ReactHelmet from "./ReactHelment";
+import ReactHelmet from './ReactHelment';
 
 export default ReactHelmet;

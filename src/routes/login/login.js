@@ -1,6 +1,10 @@
-import React from "react";
-import Proptypes from "prop-types";
+import React from 'react';
+import Proptypes from 'prop-types';
 
+/**
+ * Login
+ * @returns {Node}
+ */
 function Login() {
   return (
     <section>
@@ -13,11 +17,11 @@ Login.prototype = {
   history: Proptypes.object.isRequired,
   location: Proptypes.object.isRequired,
   match: Proptypes.object.isRequired,
-  staticContext: Proptypes.any
+  staticContext: Proptypes.any,
 };
 
 Login.defaultProps = {
-  staticContext: null
+  staticContext: null,
 };
 
 export default Login;

@@ -1,16 +1,20 @@
-import React, { lazy, Suspense } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Loading from "components/Loading";
+import React, { lazy, Suspense } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Loading from 'components/Loading';
 
 // Private Route
-import RouteAuth from "hocs/RouteAuthentication";
+import RouteAuth from 'hocs/RouteAuthentication';
 
 // Routes Lazy Load
-const HomeRoute = lazy(() => import("./home"));
-const LoginRoute = lazy(() => import("./login"));
-const ProfileRoute = lazy(() => import("./profile"));
-const RouteNotFound = lazy(() => import("./404"));
+const HomeRoute = lazy(() => import('./home'));
+const LoginRoute = lazy(() => import('./login'));
+const ProfileRoute = lazy(() => import('./profile'));
+const RouteNotFound = lazy(() => import('./404'));
 
+/**
+ * AppRouter
+ * @returns {Node}
+ */
 function AppRouter() {
   return (
     <Router>

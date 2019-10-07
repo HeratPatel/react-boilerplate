@@ -1,8 +1,8 @@
-import RouteNotFound from "./404";
-import ReactHelmet from "hocs/ReactHelmet";
+import ReactHelmet from 'hocs/ReactHelmet';
+import RouteNotFound from './404';
 
 export default ReactHelmet(
   RouteNotFound,
-  "404 - React Boilerplate",
-  "Route Not Found"
+  '404 - React Boilerplate',
+  'Route Not Found',
 );

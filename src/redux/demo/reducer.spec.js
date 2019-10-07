@@ -1,23 +1,23 @@
-import types from "./type";
-import reducer from "./reducer";
+import types from './type';
+import reducer from './reducer';
 
 const intitialState = {
-  value: "hello"
+  value: 'hello',
 };
 
-describe("demo reducer", () => {
-  it("should return the initial state", () => {
+describe('demo reducer', () => {
+  it('should return the initial state', () => {
     expect(reducer(undefined, {})).toEqual(intitialState);
   });
 
-  it("should handle DEMO_INIT", () => {
+  it('should handle DEMO_INIT', () => {
     expect(
       reducer(intitialState, {
         type: types.DEMO_INIT,
-        value: "Test"
-      })
+        value: 'Test',
+      }),
     ).toEqual({
-      value: "Test"
+      value: 'Test',
     });
   });
 });

@@ -1,7 +1,7 @@
-import types from "./type";
+import types from './type';
 
 const intitialState = {
-  value: "hello"
+  value: 'hello',
 };
 
 const demo = (state = intitialState, actions) => {

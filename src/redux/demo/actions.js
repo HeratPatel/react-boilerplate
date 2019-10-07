@@ -1,6 +1,13 @@
-import types from "./type";
+import types from './type';
 
-export const demoAction = value => ({
+/**
+ * demoAction
+ * @param {string} value
+ * @returns {Object}
+ */
+const demoAction = value => ({
   type: types.DEMO_INIT,
-  value
+  value,
 });
+
+export default demoAction;
