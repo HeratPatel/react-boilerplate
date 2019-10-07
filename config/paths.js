@@ -1,5 +1,3 @@
-
-
 const path = require('path');
 const fs = require('fs');
 const url = require('url');
@@ -15,11 +13,11 @@ function ensureSlash(inputPath, needsSlash) {
   const hasSlash = inputPath.endsWith('/');
   if (hasSlash && !needsSlash) {
     return inputPath.substr(0, inputPath.length - 1);
-  } else if (!hasSlash && needsSlash) {
-    return `${inputPath}/`;
-  } else {
-    return inputPath;
   }
+  if (!hasSlash && needsSlash) {
+    return `${inputPath}/`;
+  }
+  return inputPath;
 }
 
 const getPublicUrl = appPackageJson =>
@@ -55,7 +53,7 @@ const moduleFileExtensions = [
 // Resolve file paths in the same order as webpack
 const resolveModule = (resolveFn, filePath) => {
   const extension = moduleFileExtensions.find(extension =>
-    fs.existsSync(resolveFn(`${filePath}.${extension}`))
+    fs.existsSync(resolveFn(`${filePath}.${extension}`)),
   );
 
   if (extension) {
@@ -87,9 +85,7 @@ module.exports = {
   hocs: resolveApp('src/hocs'),
   redux: resolveApp('src/redux'),
   routes: resolveApp('src/routes'),
-  tools: resolveApp('src/tools')
+  tools: resolveApp('src/tools'),
 };
-
-
 
 module.exports.moduleFileExtensions = moduleFileExtensions;

@@ -1,8 +1,8 @@
 import React, { StrictMode } from 'react';
 import { Provider } from 'react-redux';
 import { HelmetProvider } from 'react-helmet-async';
+import Routes from 'routes';
 import configureStore from './redux';
-import Routes from './routes';
 
 /**
  * Main
