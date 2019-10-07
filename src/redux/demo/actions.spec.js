@@ -1,5 +1,5 @@
 import types from './type';
-import * as actions from './actions';
+import action from './actions';
 
 describe('demo actions', () => {
   it('demoAction', () => {
@@ -10,6 +10,6 @@ describe('demo actions', () => {
       value,
     };
 
-    expect(actions.demoAction(value)).toEqual(expectedAction);
+    expect(action(value)).toEqual(expectedAction);
   });
 });

@@ -2,7 +2,7 @@
 
 exports[`<Router /> Rendering 1`] = `
 <BrowserRouter>
-  <React.Suspense
+  <Suspense
     fallback={<Loading />}
   >
     <Switch>
@@ -66,6 +66,6 @@ exports[`<Router /> Rendering 1`] = `
         }
       />
     </Switch>
-  </React.Suspense>
+  </Suspense>
 </BrowserRouter>
 `;
