@@ -28,11 +28,12 @@
     "test": "node scripts/test.js --watchAll",
     "build": "node scripts/build.js",
     "serve": "serve -s build",
-    "lint": "./node_modules/.bin/eslint \"src/**\" --fix"
+    "lint": "./node_modules/.bin/eslint \"src/**\""
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn lint"
+      "pre-commit": "yarn lint",
+      "pre-push": "yarn lint"
     }
   },
   "browserslist": {
